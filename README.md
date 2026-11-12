@@ -2,9 +2,9 @@
 
 Proyecto final de Bases de Datos I. Reemplaza el libro `SEGUIMIENTO TEMPERAS Y VINILOS Actividad.xlsm`, que hoy funciona como "base de datos" del registro de paros de las cuatro líneas de envasado (Vinilos_1 a Vinilos_4), por una base relacional normalizada en PostgreSQL.
 
-**Integrantes:** [Nombre Apellido 1] · [Nombre Apellido 2]
-**Motor:** PostgreSQL 16 (funciona desde la versión 15)
+   **Autor:** Deivy Estiben Gomez 
 
+   **Motor:** PostgreSQL 16 o superior (probado en PostgreSQL 18)
 ## Qué se logró
 
 - Un modelo en 3FN con 15 tablas que separa el turno (`registro_turno`) de cada paro (`paro`), en lugar de las 18 columnas repetidas del Excel.
