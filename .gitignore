@@ -1,0 +1,32 @@
+# --- Datos personales y fuentes originales: NUNCA al repositorio público ---
+privado/*
+!privado/LEEME.md
+datos/*
+!datos/LEEME.md
+*.xlsm
+*.xlsx
+*.xls
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# --- Editores y sistema operativo ---
+.vscode/
+.idea/
+.dbeaver/
+.project
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+
+# --- Respaldos y salidas temporales ---
+*.backup
+*.dump
+*.log
+*.tmp
