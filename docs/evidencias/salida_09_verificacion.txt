@@ -1,0 +1,86 @@
+SET
+          prueba          |                 destino                  | filas 
+--------------------------+------------------------------------------+-------
+ V1 Conciliación de filas | Registro de turno (REG)                  |  6623
+ V1 Conciliación de filas | Paros de un turno existente (SUB)        |  1349
+ V1 Conciliación de filas | Paros con registro creado (SUB huérfana) |     5
+ V1 Conciliación de filas | No cargada: fila vacía                   |   231
+ V1 Conciliación de filas | TOTAL                                    |  8208
+ V1 Conciliación de filas | Filas del Excel según el ETL             |  8208
+(6 rows)
+
+             prueba             | filas_perdidas 
+--------------------------------+----------------
+ V2 Filas con datos sin destino |              0
+(1 row)
+
+        prueba         |         metrica         |     excel     |  base_datos   | estado 
+-----------------------+-------------------------+---------------+---------------+--------
+ V3 Totales de control | fecha_max               | 20250328.0000 | 20250328.0000 | OK
+ V3 Totales de control | fecha_min               | 20220101.0000 | 20220101.0000 | OK
+ V3 Totales de control | horas_no_trabajadas     |    41519.8500 |    41519.8500 | OK
+ V3 Totales de control | horas_trabajadas        |    38063.3500 |    38063.3500 | OK
+ V3 Totales de control | minutos_codigo_01       |    19434.0000 |    19434.0000 | OK
+ V3 Totales de control | minutos_codigo_02       |     1955.0000 |     1955.0000 | OK
+ V3 Totales de control | minutos_codigo_03       |     5228.0000 |     5228.0000 | OK
+ V3 Totales de control | minutos_codigo_04       |      510.0000 |      510.0000 | OK
+ V3 Totales de control | minutos_codigo_05       |   109159.6000 |   109159.6000 | OK
+ V3 Totales de control | minutos_codigo_06       |    92814.0000 |    92814.0000 | OK
+ V3 Totales de control | minutos_codigo_07       |    37248.5000 |    37248.5000 | OK
+ V3 Totales de control | minutos_codigo_08       |     4088.0000 |     4088.0000 | OK
+ V3 Totales de control | minutos_codigo_09       |    10928.0000 |    10928.0000 | OK
+ V3 Totales de control | minutos_codigo_10       |    21383.0000 |    21383.0000 | OK
+ V3 Totales de control | minutos_codigo_11       |      543.0000 |      543.0000 | OK
+ V3 Totales de control | minutos_codigo_12       |    13621.0000 |    13621.0000 | OK
+ V3 Totales de control | minutos_codigo_13       |     1148.0000 |     1148.0000 | OK
+ V3 Totales de control | minutos_codigo_14       |    15208.0000 |    15208.0000 | OK
+ V3 Totales de control | minutos_codigo_15       |     9950.0000 |     9950.0000 | OK
+ V3 Totales de control | minutos_codigo_16       |   120153.0000 |   120153.0000 | OK
+ V3 Totales de control | minutos_codigo_17       |    43106.0000 |    43106.0000 | OK
+ V3 Totales de control | minutos_codigo_18       |      502.0000 |      502.0000 | OK
+ V3 Totales de control | pacas                   |   378778.0000 |   378778.0000 | OK
+ V3 Totales de control | pct_productividad_excel |       77.8011 |       77.8000 | OK
+ V3 Totales de control | tiempo_paro_horas       |     8449.6517 |     8449.6517 | OK
+(25 rows)
+
+               prueba               | anio |  maquina  | excel | base_datos | estado 
+------------------------------------+------+-----------+-------+------------+--------
+ V4 Productividad por año y máquina | 2022 | Vinilos_1 | 89.71 |      89.71 | OK
+ V4 Productividad por año y máquina | 2022 | Vinilos_2 | 81.43 |      81.43 | OK
+ V4 Productividad por año y máquina | 2022 | Vinilos_3 | 88.84 |      88.84 | OK
+ V4 Productividad por año y máquina | 2022 | Vinilos_4 | 87.53 |      87.53 | OK
+ V4 Productividad por año y máquina | 2023 | Vinilos_1 | 76.02 |      76.02 | OK
+ V4 Productividad por año y máquina | 2023 | Vinilos_2 | 69.59 |      69.59 | OK
+ V4 Productividad por año y máquina | 2023 | Vinilos_3 | 82.35 |      82.35 | OK
+ V4 Productividad por año y máquina | 2023 | Vinilos_4 | 81.70 |      81.70 | OK
+ V4 Productividad por año y máquina | 2024 | Vinilos_1 | 65.63 |      65.63 | OK
+ V4 Productividad por año y máquina | 2024 | Vinilos_2 | 62.47 |      62.47 | OK
+ V4 Productividad por año y máquina | 2024 | Vinilos_3 | 76.17 |      76.17 | OK
+ V4 Productividad por año y máquina | 2024 | Vinilos_4 | 76.94 |      76.94 | OK
+ V4 Productividad por año y máquina | 2025 | Vinilos_1 | 74.14 |      74.14 | OK
+ V4 Productividad por año y máquina | 2025 | Vinilos_2 | 57.15 |      57.15 | OK
+ V4 Productividad por año y máquina | 2025 | Vinilos_3 | 67.59 |      67.59 | OK
+ V4 Productividad por año y máquina | 2025 | Vinilos_4 | 73.70 |      73.70 | OK
+(16 rows)
+
+           prueba           | paros_sin_subcodigo_resuelto 
+----------------------------+------------------------------
+ V5 Subcódigos sin resolver |                            0
+(1 row)
+
+  prueba   |                       regla                       | casos 
+-----------+---------------------------------------------------+-------
+ V6 Reglas | Paros sin registro                                |     0
+ V6 Reglas | Área/persona que atiende en código distinto de 05 |     0
+ V6 Reglas | Nombres reales en el esquema público              |     0
+(3 rows)
+
+          prueba           |              motivo              | registros 
+---------------------------+----------------------------------+-----------
+ V7 Marcados para revisión | Fila idéntica a otra en el Excel |        50
+ V7 Marcados para revisión | Pacas atípicas (> 3.000)         |        11
+ V7 Marcados para revisión | Horas del día > 24               |         9
+ V7 Marcados para revisión | Paro mayor que horas trabajadas  |         8
+ V7 Marcados para revisión | Subcódigo sin turno padre        |         5
+(5 rows)
+

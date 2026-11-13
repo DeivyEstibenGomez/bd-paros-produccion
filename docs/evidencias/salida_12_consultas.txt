@@ -1,0 +1,412 @@
+SET
+  maquina  |   mes   | horas_trabajadas | horas_paro | pct_productividad 
+-----------+---------+------------------+------------+-------------------
+ Vinilos_1 | 2024-01 |           334.00 |     117.92 |             64.70
+ Vinilos_1 | 2024-02 |           142.00 |      68.73 |             51.60
+ Vinilos_1 | 2024-03 |           184.00 |      45.83 |             75.09
+ Vinilos_1 | 2024-04 |           123.50 |      51.22 |             58.53
+ Vinilos_1 | 2024-05 |           107.50 |      51.05 |             52.51
+ Vinilos_1 | 2024-06 |            90.50 |      30.90 |             65.86
+ Vinilos_1 | 2024-07 |           170.50 |      54.97 |             67.76
+ Vinilos_1 | 2024-08 |           243.50 |      77.16 |             68.31
+ Vinilos_1 | 2024-09 |           302.00 |      83.22 |             72.44
+ Vinilos_1 | 2024-10 |           409.00 |     145.12 |             64.52
+ Vinilos_1 | 2024-11 |           196.00 |      58.25 |             70.28
+ Vinilos_1 | 2024-12 |           487.00 |     174.38 |             64.19
+ Vinilos_2 | 2024-01 |            81.50 |      26.13 |             67.93
+ Vinilos_2 | 2024-02 |           156.50 |      66.40 |             57.57
+ Vinilos_2 | 2024-03 |           157.00 |      63.90 |             59.30
+ Vinilos_2 | 2024-04 |            31.50 |      17.52 |             44.39
+ Vinilos_2 | 2024-05 |           198.50 |     101.95 |             48.64
+ Vinilos_2 | 2024-06 |           114.50 |      62.15 |             45.72
+ Vinilos_2 | 2024-07 |           176.50 |      41.97 |             76.22
+ Vinilos_2 | 2024-08 |           115.50 |      29.02 |             74.88
+ Vinilos_2 | 2024-09 |           189.50 |      56.55 |             70.16
+ Vinilos_2 | 2024-10 |           188.50 |      52.38 |             72.21
+ Vinilos_2 | 2024-11 |           253.50 |      95.70 |             62.25
+ Vinilos_2 | 2024-12 |           268.50 |     111.18 |             58.59
+ Vinilos_3 | 2024-01 |           568.00 |     137.27 |             75.83
+ Vinilos_3 | 2024-02 |           431.00 |     103.77 |             75.92
+ Vinilos_3 | 2024-03 |            24.00 |       7.02 |             70.76
+ Vinilos_3 | 2024-04 |           368.00 |      92.55 |             74.85
+ Vinilos_3 | 2024-05 |           363.50 |      78.60 |             78.38
+ Vinilos_3 | 2024-06 |           237.00 |      39.17 |             83.47
+ Vinilos_3 | 2024-07 |           368.00 |      63.13 |             82.84
+ Vinilos_3 | 2024-08 |           318.00 |      80.70 |             74.62
+ Vinilos_3 | 2024-09 |           471.00 |     115.52 |             75.47
+ Vinilos_3 | 2024-10 |           275.00 |      88.67 |             67.76
+ Vinilos_3 | 2024-11 |           533.00 |     150.23 |             71.81
+ Vinilos_3 | 2024-12 |           531.00 |     112.75 |             78.77
+ Vinilos_4 | 2024-01 |           623.00 |     137.95 |             77.86
+ Vinilos_4 | 2024-02 |           457.00 |      86.70 |             81.03
+ Vinilos_4 | 2024-03 |            48.00 |      22.40 |             53.33
+ Vinilos_4 | 2024-04 |           448.00 |     131.25 |             70.70
+ Vinilos_4 | 2024-05 |           310.50 |      92.82 |             70.11
+ Vinilos_4 | 2024-06 |           271.00 |      54.32 |             79.96
+ Vinilos_4 | 2024-07 |           419.00 |      63.00 |             84.96
+ Vinilos_4 | 2024-08 |           532.00 |      85.95 |             83.84
+ Vinilos_4 | 2024-09 |           553.00 |     135.02 |             75.58
+ Vinilos_4 | 2024-10 |           590.00 |     190.87 |             67.65
+ Vinilos_4 | 2024-11 |           492.00 |     101.67 |             79.34
+ Vinilos_4 | 2024-12 |           566.00 |     122.28 |             78.40
+(48 rows)
+
+  maquina  | mes | pct_2024 | pct_2025 | variacion_puntos 
+-----------+-----+----------+----------+------------------
+ Vinilos_1 |   1 |    64.70 |    74.67 |             9.97
+ Vinilos_1 |   2 |    51.60 |    78.26 |            26.66
+ Vinilos_1 |   3 |    75.09 |    58.68 |           -16.41
+ Vinilos_2 |   1 |    67.93 |    56.88 |           -11.05
+ Vinilos_2 |   2 |    57.57 |    66.13 |             8.56
+ Vinilos_2 |   3 |    59.30 |    50.92 |            -8.38
+ Vinilos_3 |   1 |    75.83 |    68.79 |            -7.04
+ Vinilos_3 |   2 |    75.92 |    68.97 |            -6.95
+ Vinilos_3 |   3 |    70.76 |    63.91 |            -6.85
+ Vinilos_4 |   1 |    77.86 |    72.97 |            -4.89
+ Vinilos_4 |   2 |    81.03 |    74.88 |            -6.15
+ Vinilos_4 |   3 |    53.33 |    71.19 |            17.86
+(12 rows)
+
+                             codigo                              |        area_impacto        | eventos | horas  | pct_participacion 
+-----------------------------------------------------------------+----------------------------+---------+--------+-------------------
+ [16] Alimentación y aseo de la zona de trabajo y la máquina     | Paro programado            |    2976 | 2002.6 |             23.70
+ [05] Ajuste operativo                                           | Producción                 |    3088 | 1819.3 |             21.53
+ [06] Limpieza por derrame operativo                             | Producción                 |    1898 | 1546.9 |             18.31
+ [17] Pausa activa                                               | Paro programado            |    4361 |  718.4 |              8.50
+ [07] Alistamiento de máquina / Cambio de referencia             | Producción                 |     847 |  620.8 |              7.35
+ [10] Paro por ventaja/evacuación                                | Producción                 |     536 |  356.4 |              4.22
+ [01] Falla del sistema electromecánico y/o de control           | Mantenimiento              |     467 |  323.9 |              3.83
+ [14] Falta de materia prima                                     | Almacén de materias primas |     176 |  253.5 |              3.00
+ [12] Materia prima defectuosa o material de empaque no conforme | Calidad                    |     795 |  227.0 |              2.69
+ [09] Falta de operario                                          | Producción                 |     275 |  182.1 |              2.16
+ [15] Cambio de insumos (Roscadores, O'ring, Etiquetas)          | Paro programado            |     708 |  165.8 |              1.96
+ [03] Novedad en los sistemas de potencia (Aire, energía, vapor) | Mantenimiento              |     152 |   87.1 |              1.03
+ [08] Capacitación / Reunión                                     | Producción                 |     104 |   68.1 |              0.81
+ [02] Espera de soporte de mantenimiento                         | Mantenimiento              |      91 |   32.6 |              0.39
+ [13] En espera por el aval del laboratorio de microbiología     | Calidad                    |      16 |   19.1 |              0.23
+ [11] Reproceso                                                  | Producción                 |      26 |    9.1 |              0.11
+ [04] Mantenimiento preventivo                                   | Mantenimiento              |       8 |    8.5 |              0.10
+ [18] Paro de máquina por ventas                                 | Ventas                     |       8 |    8.4 |              0.10
+(18 rows)
+
+               sistema                |        componente         | eventos | horas 
+--------------------------------------+---------------------------+---------+-------
+ 1.1 Sistema alimentador de envases   | 1.1.C Sensor              |       5 |  3.63
+ 1.1 Sistema alimentador de envases   | (sistema, sin componente) |       2 |  2.53
+ 1.1 Sistema alimentador de envases   | 1.1.A Banda               |       2 |  0.83
+ 1.1 Sistema alimentador de envases   | 1.1.B Motor               |       1 |  0.17
+ 1.1 Sistema alimentador de envases   | — subtotal sistema —      |      10 |  7.17
+ 1.2 Sistema de dosificación          | 1.2.B Ajuste de sensor    |      25 | 18.43
+ 1.2 Sistema de dosificación          | 1.2.C Cambio de válvula   |      25 | 11.65
+ 1.2 Sistema de dosificación          | (sistema, sin componente) |       6 |  4.08
+ 1.2 Sistema de dosificación          | 1.2.E O'Ring              |       9 |  1.17
+ 1.2 Sistema de dosificación          | 1.2.A Cambio de racores   |       1 |  0.42
+ 1.2 Sistema de dosificación          | — subtotal sistema —      |      66 | 35.75
+ 1.3 Sistema de banda de entrada      | (sistema, sin componente) |       2 |  0.33
+ 1.3 Sistema de banda de entrada      | 1.3.B Motor               |       1 |  0.25
+ 1.3 Sistema de banda de entrada      | — subtotal sistema —      |       3 |  0.58
+ 1.4 Sistema de tapado                | 1.4.B Pisador de tapa     |       5 |  2.20
+ 1.4 Sistema de tapado                | 1.4.A Motor del transfer  |       1 |  2.00
+ 1.4 Sistema de tapado                | 1.4.C Sensor              |       1 |  0.17
+ 1.4 Sistema de tapado                | — subtotal sistema —      |       7 |  4.37
+ 1.5 Sistema de alimentación de tapa  | (sistema, sin componente) |       7 |  5.58
+ 1.5 Sistema de alimentación de tapa  | 1.5.A Banda               |       1 |  0.08
+ 1.5 Sistema de alimentación de tapa  | — subtotal sistema —      |       8 |  5.67
+ 1.6 Sistema Video Jet                | (sistema, sin componente) |       3 |  1.33
+ 1.6 Sistema Video Jet                | 1.6.B Sensor              |       1 |  0.50
+ 1.6 Sistema Video Jet                | — subtotal sistema —      |       4 |  1.83
+ 1.7 Sistema de sujeción y roscadores | 1.7.A Banda de sujeción   |       3 |  1.75
+ 1.7 Sistema de sujeción y roscadores | 1.7.B Roscadores          |       3 |  1.42
+ 1.7 Sistema de sujeción y roscadores | (sistema, sin componente) |       1 |  0.33
+ 1.7 Sistema de sujeción y roscadores | — subtotal sistema —      |       7 |  3.50
+ 1.8 Sistema etiquetadora             | (sistema, sin componente) |       5 |  1.83
+ 1.8 Sistema etiquetadora             | — subtotal sistema —      |       5 |  1.83
+(30 rows)
+
+                    subcodigo                     | anio | horas 
+--------------------------------------------------+------+-------
+ 3.1 Fallo en la subestación                      | 2022 |  0.00
+ 3.1 Fallo en la subestación                      | 2023 |  0.00
+ 3.1 Fallo en la subestación                      | 2024 |  0.00
+ 3.1 Fallo en la subestación                      | 2025 |  0.00
+ 3.2 Fallo en la red pública                      | 2022 |  0.00
+ 3.2 Fallo en la red pública                      | 2023 |  0.00
+ 3.2 Fallo en la red pública                      | 2024 |  8.23
+ 3.2 Fallo en la red pública                      | 2025 |  0.08
+ 3.3 Falla en la red neumática o el compresor     | 2022 |  0.00
+ 3.3 Falla en la red neumática o el compresor     | 2023 | 13.63
+ 3.3 Falla en la red neumática o el compresor     | 2024 |  1.58
+ 3.3 Falla en la red neumática o el compresor     | 2025 |  0.92
+ 3.4 Falla en la red de enfriamiento o el chiller | 2022 |  0.00
+ 3.4 Falla en la red de enfriamiento o el chiller | 2023 |  0.00
+ 3.4 Falla en la red de enfriamiento o el chiller | 2024 |  0.00
+ 3.4 Falla en la red de enfriamiento o el chiller | 2025 |  0.00
+ 3.5 Falla en la red de vapor o la caldera        | 2022 |  0.00
+ 3.5 Falla en la red de vapor o la caldera        | 2023 |  0.00
+ 3.5 Falla en la red de vapor o la caldera        | 2024 |  0.00
+ 3.5 Falla en la red de vapor o la caldera        | 2025 |  0.00
+(20 rows)
+
+                         subcodigo                         | horas_total | horas_operarios | horas_mantenimiento | pct  
+-----------------------------------------------------------+-------------+-----------------+---------------------+------
+ 5.2 Sistema de dosificación de pintura, frontal posterior |       785.8 |           499.8 |               277.7 | 43.2
+ 5.5 Transfer y pisador de tapa                            |       237.9 |           145.0 |                83.9 | 13.1
+ 5.6 Sistema alimentador de tapa y tobogán                 |       164.6 |           126.1 |                38.5 |  9.0
+ 5.9 Sistema de etiquetado                                 |       158.7 |            87.3 |                70.6 |  8.7
+ 5.7 Video Jet                                             |       155.1 |           123.2 |                27.3 |  8.5
+ 5.8 Banda de sujeción y roscadores                        |        99.0 |            36.2 |                54.7 |  5.4
+ 5.11 Lavado de boquilla                                   |        61.8 |            45.3 |                 5.7 |  3.4
+ 5.3 Banda transportadora de entrada                       |        54.7 |            27.1 |                23.5 |  3.0
+ 5.1 Sistema alimentador de envases                        |        52.4 |            29.6 |                21.6 |  2.9
+ 5.10 Purga de color                                       |        30.8 |            21.4 |                 2.4 |  1.7
+ 5.4 Banda transportadora de salida                        |        13.2 |             5.1 |                 8.1 |  0.7
+ (sin especificar)                                         |         5.4 |             4.3 |                     |  0.3
+(12 rows)
+
+       turno        | registros | pacas_promedio | pacas_por_hora_efectiva | pct_productividad 
+--------------------+-----------+----------------+-------------------------+-------------------
+ 10pm-6am (Turno 3) |       584 |           55.3 |                    9.43 |             75.99
+ 2pm-10pm (Turno 2) |       679 |           60.3 |                   10.76 |             74.00
+ 6am-2pm (Turno 1)  |       752 |           61.5 |                   11.34 |             71.02
+ 6am-4:30pm         |       187 |          230.0 |                   36.55 |             62.11
+(4 rows)
+
+  maquina  | puesto |                         subcodigo                         | horas 
+-----------+--------+-----------------------------------------------------------+-------
+ Vinilos_1 |      1 | 5.8 Banda de sujeción y roscadores                        |  8.07
+ Vinilos_1 |      2 | 5.2 Sistema de dosificación de pintura, frontal posterior |  6.38
+ Vinilos_1 |      3 | 5.5 Transfer y pisador de tapa                            |  5.67
+ Vinilos_2 |      1 | 5.2 Sistema de dosificación de pintura, frontal posterior | 13.63
+ Vinilos_2 |      2 | 5.8 Banda de sujeción y roscadores                        |  4.08
+ Vinilos_2 |      3 | 5.7 Video Jet                                             |  3.67
+ Vinilos_3 |      1 | 5.5 Transfer y pisador de tapa                            | 18.50
+ Vinilos_3 |      2 | 5.2 Sistema de dosificación de pintura, frontal posterior | 14.17
+ Vinilos_3 |      3 | 5.8 Banda de sujeción y roscadores                        | 11.08
+ Vinilos_4 |      1 | 5.2 Sistema de dosificación de pintura, frontal posterior | 14.53
+ Vinilos_4 |      2 | 5.3 Banda transportadora de entrada                       | 12.08
+ Vinilos_4 |      3 | 5.5 Transfer y pisador de tapa                            | 10.53
+(12 rows)
+
+  maquina  | anio | mes | pct_productividad | pct_planta_anio 
+-----------+------+-----+-------------------+-----------------
+ Vinilos_1 | 2024 |   1 |             64.70 |           72.61
+ Vinilos_1 | 2024 |   2 |             51.60 |           72.61
+ Vinilos_1 | 2024 |   4 |             58.53 |           72.61
+ Vinilos_1 | 2024 |   5 |             52.51 |           72.61
+ Vinilos_1 | 2024 |   6 |             65.86 |           72.61
+ Vinilos_1 | 2024 |   7 |             67.76 |           72.61
+ Vinilos_1 | 2024 |   8 |             68.31 |           72.61
+ Vinilos_1 | 2024 |   9 |             72.44 |           72.61
+ Vinilos_1 | 2024 |  10 |             64.52 |           72.61
+ Vinilos_1 | 2024 |  11 |             70.28 |           72.61
+ Vinilos_1 | 2024 |  12 |             64.19 |           72.61
+ Vinilos_2 | 2024 |   1 |             67.93 |           72.61
+ Vinilos_2 | 2024 |   2 |             57.57 |           72.61
+ Vinilos_2 | 2024 |   3 |             59.30 |           72.61
+ Vinilos_2 | 2024 |   4 |             44.39 |           72.61
+ Vinilos_2 | 2024 |   5 |             48.64 |           72.61
+ Vinilos_2 | 2024 |   6 |             45.72 |           72.61
+ Vinilos_2 | 2024 |   9 |             70.16 |           72.61
+ Vinilos_2 | 2024 |  10 |             72.21 |           72.61
+ Vinilos_2 | 2024 |  11 |             62.25 |           72.61
+ Vinilos_2 | 2024 |  12 |             58.59 |           72.61
+ Vinilos_3 | 2024 |   3 |             70.76 |           72.61
+ Vinilos_3 | 2024 |  10 |             67.76 |           72.61
+ Vinilos_3 | 2024 |  11 |             71.81 |           72.61
+ Vinilos_4 | 2024 |   3 |             53.33 |           72.61
+ Vinilos_4 | 2024 |   4 |             70.70 |           72.61
+ Vinilos_4 | 2024 |   5 |             70.11 |           72.61
+ Vinilos_4 | 2024 |  10 |             67.65 |           72.61
+(28 rows)
+
+ tecnico | activo | ajustes_atendidos | horas | minutos_promedio | ultimo_ajuste 
+---------+--------+-------------------+-------+------------------+---------------
+ MTO-010 | t      |               205 | 155.2 |             45.4 | 2025-03-18
+ MTO-002 | t      |               169 | 141.3 |             50.1 | 2025-03-26
+ MTO-013 | t      |               151 |  95.4 |             37.9 | 2025-03-26
+ MTO-011 | t      |               123 |  92.7 |             45.2 | 2025-03-27
+ MTO-015 | t      |                76 |  56.4 |             44.6 | 2024-09-18
+ MTO-007 | t      |                28 |  17.1 |             36.7 | 2025-01-28
+ MTO-009 | t      |                12 |   8.3 |             41.7 | 2024-12-30
+ MTO-008 | t      |                 9 |  16.8 |            112.2 | 2024-11-11
+ MTO-006 | t      |                 6 |   2.4 |             24.0 | 2024-10-14
+ MTO-014 | t      |                 5 |   3.1 |             37.4 | 2023-11-10
+ MTO-004 | t      |                 1 |   0.1 |              5.0 | 2025-02-27
+ MTO-003 | t      |                 0 |   0.0 |                  | 
+ MTO-012 | t      |                 0 |   0.0 |                  | 
+ MTO-005 | t      |                 0 |   0.0 |                  | 
+ MTO-001 | t      |                 0 |   0.0 |                  | 
+(15 rows)
+
+ operaria | turnos | pacas | pct_productividad 
+----------+--------+-------+-------------------
+ OPE-027  |    189 | 10760 |             78.79
+ OPE-038  |     97 |  5639 |             77.68
+ OPE-003  |    191 | 13829 |             76.68
+ OPE-036  |    179 |  9866 |             76.45
+ OPE-017  |    158 |  8885 |             74.71
+ OPE-023  |    141 |  6754 |             69.53
+ OPE-032  |    173 | 35395 |             69.46
+ OPE-004  |    179 | 13410 |             68.89
+ OPE-002  |    142 | 11663 |             68.49
+ OPE-020  |    148 |  9119 |             67.89
+ OPE-019  |     66 |  3071 |             67.12
+(11 rows)
+
+ catalogo |                            tipo_paro                            |                       codigo_equivalente                        | registros | horas_no_trabajadas 
+----------+-----------------------------------------------------------------+-----------------------------------------------------------------+-----------+---------------------
+ ANTIGUO  | 17. PARO DE MAQUINA                                             | (sin equivalencia)                                              |       952 |            18498.00
+ VIGENTE  | [18] Paro de máquina por ventas                                 | [18] Paro de máquina por ventas                                 |       605 |            11287.85
+ ANTIGUO  | 9. FALTA DE PROGRAMACIÓN (PLANEACIÓN)                           | (sin equivalencia)                                              |       251 |             5036.00
+ ANTIGUO  | 16. PARO POR PROCESO ANTERIOR                                   | (sin equivalencia)                                              |        94 |             2046.00
+ ANTIGUO  | 10. PARO POR MATERIA PRIMA O MATERIAL DE EMPAQUE NO CONFORME    | [12] Materia prima defectuosa o material de empaque no conforme |        66 |             1344.00
+ ANTIGUO  | 6. FALTA DE MATERIALES O MATERIAS PRIMAS                        | [14] Falta de materia prima                                     |        61 |             1273.00
+ VIGENTE  | [14] Falta de materia prima                                     | [14] Falta de materia prima                                     |        50 |             1060.50
+ ANTIGUO  | 15. APROBACION DE LABORATORIO (MICROBIOLOGIA)                   | [13] En espera por el aval del laboratorio de microbiología     |        24 |              434.00
+ ANTIGUO  | 5. AISLAMIENTO/CAMBIO DE PRODUCTO                               | [07] Alistamiento de máquina / Cambio de referencia             |         5 |               83.00
+ VIGENTE  | [12] Materia prima defectuosa o material de empaque no conforme | [12] Materia prima defectuosa o material de empaque no conforme |         5 |               82.00
+ ANTIGUO  | 11. LIMPIEZA NO PROGRAMADA                                      | [06] Limpieza por derrame operativo                             |         3 |               64.00
+ ANTIGUO  | 3. AJUSTE ELECTRICO O DE SERVICIOS (AIRE, CALDERA, GAS)         | [03] Novedad en los sistemas de potencia (Aire, energía, vapor) |         5 |               64.00
+ VIGENTE  | [05] Ajuste operativo                                           | [05] Ajuste operativo                                           |         7 |               43.50
+ VIGENTE  | [07] Alistamiento de máquina / Cambio de referencia             | [07] Alistamiento de máquina / Cambio de referencia             |         4 |               34.50
+ ANTIGUO  | 4. AJUSTE DE OPERACIÓN                                          | [05] Ajuste operativo                                           |         2 |               32.00
+ VIGENTE  | [09] Falta de operario                                          | [09] Falta de operario                                          |         8 |               19.00
+ VIGENTE  | [03] Novedad en los sistemas de potencia (Aire, energía, vapor) | [03] Novedad en los sistemas de potencia (Aire, energía, vapor) |         1 |                4.00
+ VIGENTE  | [13] En espera por el aval del laboratorio de microbiología     | [13] En espera por el aval del laboratorio de microbiología     |         1 |                3.50
+(18 rows)
+
+                           codigo                            | horas  | pct_acumulado 
+-------------------------------------------------------------+--------+---------------
+ [16] Alimentación y aseo de la zona de trabajo y la máquina | 1305.7 |          32.8
+ [05] Ajuste operativo                                       |  861.2 |          54.5
+ [06] Limpieza por derrame operativo                         |  732.1 |          72.9
+ [07] Alistamiento de máquina / Cambio de referencia         |  378.4 |          82.4
+(4 rows)
+
+   mes   | pct_productividad | variacion_vs_mes_anterior 
+---------+-------------------+---------------------------
+ 2024-01 |             73.90 |                          
+ 2024-02 |             72.56 |                     -1.34
+ 2024-03 |             66.31 |                     -6.25
+ 2024-04 |             69.87 |                      3.56
+ 2024-05 |             66.90 |                     -2.97
+ 2024-06 |             73.84 |                      6.94
+ 2024-07 |             80.33 |                      6.49
+ 2024-08 |             77.43 |                     -2.90
+ 2024-09 |             74.25 |                     -3.18
+ 2024-10 |             67.38 |                     -6.87
+ 2024-11 |             72.48 |                      5.10
+ 2024-12 |             71.90 |                     -0.58
+ 2025-01 |             70.31 |                     -1.59
+ 2025-02 |             73.93 |                      3.62
+ 2025-03 |             60.69 |                    -13.24
+(15 rows)
+
+  maquina  |        referencia         |               situacion               
+-----------+---------------------------+---------------------------------------
+ Vinilos_1 | Alocolor 22cc (6 col)     | En catálogo, nunca producida
+ Vinilos_1 | Alpha 30 cc (7 col)       | En catálogo, nunca producida
+ Vinilos_1 | Aprendo 22cc (6 col)      | En catálogo, nunca producida
+ Vinilos_1 | Catedral 22cc (6 col)     | En catálogo, nunca producida
+ Vinilos_1 | Creativ 22cc (6 col)      | En catálogo, nunca producida
+ Vinilos_1 | Creativ 30cc (12 col)     | En catálogo, nunca producida
+ Vinilos_1 | Durex 22cc (6 col)        | En catálogo, nunca producida
+ Vinilos_1 | Kids 15cc (6 col)         | En catálogo, nunca producida
+ Vinilos_1 | Kids 22cc (12 col)        | En catálogo, nunca producida
+ Vinilos_1 | Kids 22cc (6 col)         | En catálogo, nunca producida
+ Vinilos_1 | Kids 30cc (12 col)        | En catálogo, nunca producida
+ Vinilos_1 | Klips 22cc (12 col)       | En catálogo, nunca producida
+ Vinilos_1 | Klips 22cc (6 col)        | En catálogo, nunca producida
+ Vinilos_1 | Klips 30cc (6 col)        | En catálogo, nunca producida
+ Vinilos_1 | Kp 30cc (12 col)          | En catálogo, nunca producida
+ Vinilos_1 | Kp 30cc (6 col)           | En catálogo, nunca producida
+ Vinilos_1 | Madison 22cc (12 col)     | En catálogo, nunca producida
+ Vinilos_1 | Madison 22cc (6 col)      | En catálogo, nunca producida
+ Vinilos_1 | Mis pasitos 22cc (12 col) | En catálogo, nunca producida
+ Vinilos_1 | Mis pasitos 22cc (6 col)  | En catálogo, nunca producida
+ Vinilos_1 | Murano 22cc (12 col)      | En catálogo, nunca producida
+ Vinilos_1 | Murano 22cc (6 col)       | En catálogo, nunca producida
+ Vinilos_1 | Ofimak 22cc (6 col)       | En catálogo, nunca producida
+ Vinilos_1 | Paco 22cc (6 col)         | En catálogo, nunca producida
+ Vinilos_1 | Stanford 22cc (6 col)     | En catálogo, nunca producida
+ Vinilos_1 | Star School 15cc (6 col)  | En catálogo, nunca producida
+ Vinilos_1 | Sysabe 22cc (6 col)       | En catálogo, nunca producida
+ Vinilos_1 | Sysabe 22cc (7 col)       | En catálogo, nunca producida
+ Vinilos_1 | Utilice 22cc (6 col)      | En catálogo, nunca producida
+ Vinilos_2 | Alocolor 22cc (6 col)     | En catálogo, nunca producida
+ Vinilos_2 | Parchesitos 30cc (12 col) | En catálogo, nunca producida
+ Vinilos_3 | Alpha 30 cc (7 col)       | En catálogo, nunca producida
+ Vinilos_3 | Arti 30 cc (7 col)        | En catálogo, nunca producida
+ Vinilos_3 | Creativ 22cc (6 col)      | En catálogo, nunca producida
+ Vinilos_3 | Creativ 30cc (12 col)     | En catálogo, nunca producida
+ Vinilos_3 | Kids 30cc (12 col)        | En catálogo, nunca producida
+ Vinilos_3 | Kp 30cc (7 col)           | En catálogo, nunca producida
+ Vinilos_3 | Madison 22cc (12 col)     | En catálogo, nunca producida
+ Vinilos_3 | Madison 22cc (6 col)      | En catálogo, nunca producida
+ Vinilos_3 | Ofimak 22cc (6 col)       | En catálogo, nunca producida
+ Vinilos_3 | Pintorcitos 30cc (12 col) | En catálogo, nunca producida
+ Vinilos_3 | Stanford 22cc (6 col)     | En catálogo, nunca producida
+ Vinilos_3 | Stanford 30cc (7 col)     | En catálogo, nunca producida
+ Vinilos_3 | Sysabe 22cc (7 col)       | En catálogo, nunca producida
+ Vinilos_3 | Utilice 22cc (6 col)      | En catálogo, nunca producida
+ Vinilos_4 | Catedral 22cc (6 col)     | En catálogo, nunca producida
+ Vinilos_4 | Creativ 22cc (6 col)      | En catálogo, nunca producida
+ Vinilos_4 | Durex 22cc (6 col)        | En catálogo, nunca producida
+ Vinilos_4 | Klips 22cc (12 col)       | En catálogo, nunca producida
+ Vinilos_4 | Madison 22cc (12 col)     | En catálogo, nunca producida
+ Vinilos_4 | Madison 22cc (6 col)      | En catálogo, nunca producida
+ Vinilos_4 | Murano 22cc (12 col)      | En catálogo, nunca producida
+ Vinilos_4 | Ofimak 22cc (6 col)       | En catálogo, nunca producida
+ Vinilos_4 | Pintorcitos 22cc (6 col)  | En catálogo, nunca producida
+ Vinilos_4 | Stanford 22cc (6 col)     | En catálogo, nunca producida
+ Vinilos_4 | Sysabe 22cc (7 col)       | En catálogo, nunca producida
+ Vinilos_4 | Utilice 22cc (6 col)      | En catálogo, nunca producida
+ Vinilos_1 | Estilo Kids 22cc (6 col)  | Producida pero no está en el catálogo
+ Vinilos_1 | Parchesitos 15cc (6 col)  | Producida pero no está en el catálogo
+ Vinilos_1 | Pintorcitos 70cc (6 col)  | Producida pero no está en el catálogo
+ Vinilos_1 | Stilo Kids 22cc (6 col)   | Producida pero no está en el catálogo
+ Vinilos_1 | Vinilos x 30 Blanco       | Producida pero no está en el catálogo
+ Vinilos_1 | Vinilos x 30 Negro        | Producida pero no está en el catálogo
+ Vinilos_3 | Klips 15cc (12 col)       | Producida pero no está en el catálogo
+ Vinilos_3 | Klips 30cc (12 col)       | Producida pero no está en el catálogo
+ Vinilos_3 | Parchesitos 15cc (6 col)  | Producida pero no está en el catálogo
+ Vinilos_4 | Kids 15cc (6 col)         | Producida pero no está en el catálogo
+(67 rows)
+
+ fila_excel |   fecha    |  maquina  |       turno        | pacas_producidas | horas_trabajadas | horas_no_trabajadas | horas_paro 
+------------+------------+-----------+--------------------+------------------+------------------+---------------------+------------
+       7246 | 2022-05-20 | Vinilos_4 | No registrado      |                  |             0.00 |               32.00 |           
+       5103 | 2023-07-21 | Vinilos_1 | No registrado      |              150 |             8.00 |                0.00 |      15.63
+       5094 | 2023-07-22 | Vinilos_1 | No registrado      |             3552 |             8.00 |                0.00 |       0.47
+       5095 | 2023-07-22 | Vinilos_1 | No registrado      |             4136 |             8.00 |                0.00 |       0.63
+       5096 | 2023-07-22 | Vinilos_1 | No registrado      |             9417 |             8.00 |                0.00 |       0.72
+       5089 | 2023-07-23 | Vinilos_1 | No registrado      |             3552 |             8.00 |                0.00 |       0.63
+       5080 | 2023-07-24 | Vinilos_1 | No registrado      |             5184 |             8.00 |                0.00 |       0.63
+       5079 | 2023-07-24 | Vinilos_1 | No registrado      |             4416 |             8.00 |                0.00 |       0.63
+       5071 | 2023-07-25 | Vinilos_1 | No registrado      |             4608 |             8.00 |                0.00 |       1.35
+       5070 | 2023-07-25 | Vinilos_1 | No registrado      |             4536 |             8.00 |                0.00 |       1.38
+       5049 | 2023-07-28 | Vinilos_1 | No registrado      |             4128 |             8.00 |                0.00 |       0.80
+       5048 | 2023-07-28 | Vinilos_1 | No registrado      |             4644 |             8.00 |                0.00 |       0.47
+       5043 | 2023-07-29 | Vinilos_1 | No registrado      |             4320 |             8.00 |                0.00 |       1.13
+       4554 | 2023-10-25 | Vinilos_1 | 6am-2pm (Turno 1)  |               59 |             8.00 |                0.00 |       9.55
+       4512 | 2023-10-31 | Vinilos_1 | 6am-2pm (Turno 1)  |                  |             0.00 |                0.00 |       0.75
+       4315 | 2023-11-19 | Vinilos_3 | No registrado      |                0 |             8.00 |               24.00 |           
+       4295 | 2023-11-20 | Vinilos_3 | No registrado      |                0 |             8.00 |               24.00 |           
+       4276 | 2023-11-21 | Vinilos_3 | No registrado      |                0 |             8.00 |               24.00 |           
+       4255 | 2023-11-22 | Vinilos_3 | No registrado      |                0 |             8.00 |               24.00 |           
+       4245 | 2023-11-23 | Vinilos_3 | No registrado      |                0 |             8.00 |               24.00 |           
+       4238 | 2023-11-24 | Vinilos_3 | No registrado      |                0 |             8.00 |               24.00 |           
+       4230 | 2023-11-25 | Vinilos_3 | No registrado      |                0 |             8.00 |               24.00 |           
+       4222 | 2023-11-26 | Vinilos_3 | No registrado      |                0 |             8.00 |               24.00 |           
+       4071 | 2023-12-04 | Vinilos_2 | 6am-4:30pm         |               45 |             2.00 |                8.50 |       2.83
+       4054 | 2023-12-05 | Vinilos_2 | 6am-4:30pm         |               33 |            10.50 |               13.50 |      18.17
+       3749 | 2023-12-26 | Vinilos_1 | 6am-2pm (Turno 1)  |               36 |             8.00 |                0.00 |      10.32
+       3538 | 2024-01-10 | Vinilos_1 | 10pm-6am (Turno 3) |                  |             0.00 |                0.00 |       0.25
+       3535 | 2024-01-10 | Vinilos_1 | 2pm-10pm (Turno 2) |                  |             0.00 |                0.00 |       0.58
+       3534 | 2024-01-10 | Vinilos_1 | 2pm-10pm (Turno 2) |                  |             0.00 |                0.00 |       0.17
+       3537 | 2024-01-10 | Vinilos_1 | 10pm-6am (Turno 3) |                  |             0.00 |                0.00 |       0.17
+       2887 | 2024-02-21 | Vinilos_1 | 6am-2pm (Turno 1)  |               29 |             8.00 |                0.00 |       9.95
+       2237 | 2024-04-30 | Vinilos_4 | 2pm-10pm (Turno 2) |               10 |             8.00 |                0.00 |       8.77
+       2052 | 2024-05-14 | Vinilos_3 | 10pm-6am (Turno 3) |                5 |             0.50 |                7.50 |       0.72
+(33 rows)
+

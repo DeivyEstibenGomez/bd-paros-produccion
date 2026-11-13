@@ -1,0 +1,79 @@
+SET
+BEGIN
+INSERT 0 1
+ id_registro |   fecha    | parte | requiere_revision | tiene_fecha_registro 
+-------------+------------+-------+-------------------+----------------------
+        6633 | 2025-04-01 |     1 | f                 | t
+(1 row)
+
+INSERT 0 1
+INSERT 0 1
+   fecha    |  maquina  |        codigo         |                       subcodigo                       | persona_atiende | minutos 
+------------+-----------+-----------------------+-------------------------------------------------------+-----------------+---------
+ 2025-04-01 | Vinilos_3 | [05] Ajuste operativo | Sistema de dosificación de pintura, frontal posterior | MTO-002         |   25.00
+ 2025-04-01 | Vinilos_3 | [17] Pausa activa     |                                                       |                 |    3.00
+(2 rows)
+
+NOTICE:  B1 rechazado (CHECK minutos): new row for relation "paro" violates check constraint "ck_paro_minutos"
+DO
+NOTICE:  B2 rechazado (FK subcódigo-código): insert or update on table "paro" violates foreign key constraint "fk_paro_subcodigo"
+DO
+NOTICE:  B3 rechazado (trigger RN-03): El código 01 exige subcódigo (regla RN-03).
+DO
+NOTICE:  B4 rechazado (trigger RN-14): Los paros del turno sumarían 498.00 min y el turno solo tiene 480.00 min trabajados (regla RN-14).
+DO
+NOTICE:  B5 rechazado (UNIQUE turno): duplicate key value violates unique constraint "uq_registro_turno_natural"
+DO
+NOTICE:  B6 rechazado (FK máquina-referencia): insert or update on table "registro_turno" violates foreign key constraint "fk_rt_maquina_referencia"
+DO
+NOTICE:  B7 rechazado (CHECK 24 h): new row for relation "registro_turno" violates check constraint "ck_rt_dia_24h"
+DO
+NOTICE:  B8 rechazado (CHECK código-rol): new row for relation "persona" violates check constraint "ck_persona_codigo"
+DO
+NOTICE:  B9 rechazado (NOT NULL): null value in column "id_codigo" of relation "paro" violates not-null constraint
+DO
+NOTICE:  B10 rechazado (CHECK solo 05): new row for relation "paro" violates check constraint "ck_paro_atiende_solo_05"
+DO
+UPDATE 1
+NOTICE:  C2 rechazado (CHECK horas 0-24): new row for relation "registro_turno" violates check constraint "ck_rt_horas_trab"
+DO
+NOTICE:  C2b rechazado (trigger duración del turno): El turno dura 8.00 h y se reportan 10.00 h trabajadas.
+DO
+ paros_codigo_18_antes 
+-----------------------
+                     8
+(1 row)
+
+UPDATE 1
+ paros_codigo_19_despues | quedan_en_18 
+-------------------------+--------------
+                       8 |            0
+(1 row)
+
+NOTICE:  C4 rechazado (CHECK NOT VALID al editar histórico): new row for relation "registro_turno" violates check constraint "ck_rt_dia_24h"
+DO
+NOTICE:  D1 rechazado (RESTRICT código con paros): update or delete on table "codigo_paro" violates foreign key constraint "fk_paro_codigo" on table "paro"
+DO
+NOTICE:  D2 rechazado (RESTRICT persona con turnos): update or delete on table "persona" violates foreign key constraint "fk_rt_operaria" on table "registro_turno"
+DO
+UPDATE 1
+ paros_antes 
+-------------
+           2
+(1 row)
+
+DELETE 1
+ paros_despues 
+---------------
+             0
+(1 row)
+
+INSERT 0 1
+INSERT 0 1
+DELETE 1
+ clave |  descripcion   | id_equivalente 
+-------+----------------+----------------
+ 4.9   | Prueba antigua |               
+(1 row)
+
+ROLLBACK
